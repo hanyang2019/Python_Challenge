@@ -17,10 +17,15 @@ with open(csvpath, newline='') as csvfile:
      print('Financial Analysis')
      print('-----------------------------')
      print(f'Total Months: {total_month}')
+     print('Financial Analysis',file=open('PyBank_Result.txt','a'))
+     print('-----------------------------',file=open('PyBank_Result.txt','a'))
+     print(f'Total Months: {total_month}',file=open('PyBank_Result.txt','a'))
      total_amount=sum(profit_loss_list)
      print(f'Total: ${total_amount}')
+     print(f'Total: ${total_amount}',file=open('PyBank_Result.txt','a'))
      average_change=round(total_amount/total_month,2)
      print(f'Average Change: ${average_change}')
+     print(f'Average Change: ${average_change}',file=open('PyBank_Result.txt','a'))
      max_increase=max(profit_loss_list)
      max_decrease=min(profit_loss_list)
      #print(max_increase)
@@ -30,5 +35,8 @@ with open(csvpath, newline='') as csvfile:
      for row in csvreader:
          if row[1]==str(max_increase):
             print(f'Greatest Increase in Profit: {row[0]} (${max_increase})')
+            print(f'Greatest Increase in Profit: {row[0]} (${max_increase})',file=open('PyBank_Result.txt','a'))
          elif row[1]==str(max_decrease):
             print(f'Greatest Decrease in Profit: {row[0]} (${max_decrease})')
+            print(f'Greatest Decrease in Profit: {row[0]} (${max_decrease})',file=open('PyBank_Result.txt','a'))
+

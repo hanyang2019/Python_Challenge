@@ -15,6 +15,10 @@ with open(csvpath, newline='') as csvfile:
     print('------------------------')
     print(f'Total Votes: {total_vote}')
     print('------------------------')
+    print('Election Results',file=open('PyPoll_Result.txt','a'))
+    print('------------------------',file=open('PyPoll_Result.txt','a'))
+    print(f'Total Votes: {total_vote}',file=open('PyPoll_Result.txt','a'))
+    print('------------------------',file=open('PyPoll_Result.txt','a'))
     #print(candidate_list)
 count_k=0
 count_c=0
@@ -46,6 +50,14 @@ with open(csvpath, newline='') as csvfile:
     print(f'{candidate_list[3]}: {percentage_o}.000% ({count_o})')
     print('------------------------')
     #print(count_list)
-    print(f'Winner: {candidate_list[count_list.index(max(count_list))]}')
-    print('------------------------')
+    print(f'Winner: {candidate_list[count_list.index(max(count_list))]}',file=open('PyPoll_Result.txt','a'))
+    print('------------------------',file=open('PyPoll_Result.txt','a'))
+    print(f'{candidate_list[0]}: {percentage_k}.000% ({count_k})',file=open('PyPoll_Result.txt','a'))
+    print(f'{candidate_list[1]}: {percentage_c}.000% ({count_c})',file=open('PyPoll_Result.txt','a'))
+    print(f'{candidate_list[2]}: {percentage_l}.000% ({count_l})',file=open('PyPoll_Result.txt','a'))
+    print(f'{candidate_list[3]}: {percentage_o}.000% ({count_o})',file=open('PyPoll_Result.txt','a'))
+    print('------------------------',file=open('PyPoll_Result.txt','a'))
+    #print(count_list)
+    print(f'Winner: {candidate_list[count_list.index(max(count_list))]}',file=open('PyPoll_Result.txt','a'))
+    print('------------------------',file=open('PyPoll_Result.txt','a'))
      
